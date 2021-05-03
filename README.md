@@ -13,3 +13,9 @@ This was originally streamed on Twitch, and will be up on our YouTube channel, h
 There is also a blog on the developer portal which can be found here: https://developer.tomtom.com/blog/build-different/do-taxi-drivers-take-fastest-route.
 
 Register on the developer portal for a free API key to get started: https://bit.ly/38nbvLX
+
+To use the python code above, paste each section into the separat cells indicated.
+
+To get started with Jupyter Notebook, check out their website, and then run jupyter-lab in your terminal to get going.
+
+https://jupyter.org/
