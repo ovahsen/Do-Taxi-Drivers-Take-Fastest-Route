@@ -1,3 +1,6 @@
+#Bracketed numbers indicate individual cells for each code to be run in Jupyter Notebook
+#The data set used here and referenced in the CVS is originally from Kaggle.https://www.kaggle.com/c/pkdd-15-taxi-trip-time-prediction-ii
+
 #[3]
 
 # First we import a bunch of libraries
@@ -14,10 +17,13 @@ import time
 from tqdm import tqdm
 
 # Then we load the data
+# Make sure the CSV is in the same library as your notebook, say in the online editor for Jupyter
+# Else, you will have to indicate the path
 df = pd.read_csv("test.csv")
 df.head()
 
 #[4]
+#set degrees of freedom
 df.shape
 (1710670, 9)
 
@@ -42,6 +48,7 @@ TomTom_map = initialise_map()
 TomTom_map
 
 #[6]
+#begin drawing our polylines
 def polyline_to_list(polyline):
     """
     The polyline_to_list_lists function transforms the raw polyline to a list of tuples
@@ -59,6 +66,7 @@ folium.PolyLine(polyline).add_to(TomTom_map)
 TomTom_map
 
 #[7]
+#We want to convert the times in order to be able to pass them into the API
 def convertUnixTimeToDate(timestamp):
     """
     The convertUnixTimeToDate function transforms a UNIX timestamp to a ISO861 dateTime format
@@ -89,6 +97,7 @@ def convertUnixTimeToDate(timestamp):
 
     return routingTime
 
+# Now, we are going to be calling the routing API and as desribed below, build routes & receive a response
 def call_routing_api(polyline, departure_time, api_key=api_key, taxi_route=True):
     """
     Input is a polyline of a taxi route, a UNIX departure time, and whether to get the results for the taxi
@@ -178,7 +187,7 @@ TomTom_map
 
 
 #[8]
-random_sample = df.sample(300, random_state=123)#CHANGED FROM 1200, ONLY 321 RECORDS EXIST
+random_sample = df.sample(300, random_state=123)#NOTE, ONLY 321 RECORDS EXIST
 random_sample = random_sample.reset_index().drop('index', axis=1) # reset index so we can iterate
 
 # initialise dictionary in which we will store our results
@@ -236,6 +245,7 @@ plt.xlabel("Minutes")
 plt.ylabel('Counts')
 
 #[14]
+# Now we are going to draw more visualizations to indicate the average delay in each spot using these colors
 linear_color = cm.LinearColormap(['green', 'yellow', 'red'], vmin=0, vmax=0.5)
 linear_color
 
