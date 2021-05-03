@@ -1,5 +1,5 @@
 #Bracketed numbers indicate individual cells for each code to be run in Jupyter Notebook
-#The data set used here and referenced in the CVS is originally from Kaggle.https://www.kaggle.com/c/pkdd-15-taxi-trip-time-prediction-ii
+#The data set used here and referenced in the CSV is originally from Kaggle.https://www.kaggle.com/c/pkdd-15-taxi-trip-time-prediction-ii
 
 #[3]
 
