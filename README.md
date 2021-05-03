@@ -21,3 +21,7 @@ To get started with Jupyter Notebook, check out their website, and then run jupy
 https://jupyter.org/
 
 To use the notebook, start Jupyter lab and open it directly.
+
+The data set used here, in the article, and referenced in the CSV is originally from Kaggle.https://www.kaggle.com/c/pkdd-15-taxi-trip-time-prediction-ii
+
+Happy Mapping!
