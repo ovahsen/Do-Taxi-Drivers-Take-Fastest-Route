@@ -19,3 +19,5 @@ To use the python code above, paste each section into the separat cells indicate
 To get started with Jupyter Notebook, check out their website, and then run jupyter-lab in your terminal to get going.
 
 https://jupyter.org/
+
+To use the notebook, start Jupyter lab and open it directly.
